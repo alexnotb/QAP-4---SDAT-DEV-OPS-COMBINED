@@ -452,52 +452,52 @@ Alex - QAP 4 SDAT DevOps Assessment
 All testing screenshots are located in the `screenshots/` folder.
 
 ### 1. API Health Check
-![API Health](./screenshots/01-api-health.png)
+![API Health](screenshots/01-api-health.png)
 - **Endpoint**: `GET /api/health`
 - **Shows**: API version and available endpoints
 
 ### 2. Get All Members
-![Get All Members](./screenshots/02-get-members.png)
+![Get All Members](screenshots/02-get-members.png)
 - **Endpoint**: `GET /api/members`
 - **Shows**: List of all golf club members with their tournaments
 
 ### 3. Get All Tournaments
-![Get All Tournaments](./screenshots/03-get-tournaments.png)
+![Get All Tournaments](screenshots/03-get-tournaments.png)
 - **Endpoint**: `GET /api/tournaments`
 - **Shows**: List of all tournaments with participating members
 
 ### 4. Get Member Details
-![Member Details](./screenshots/04-member-details.png)
+![Member Details](screenshots/04-member-details.png)
 - **Endpoint**: `GET /api/members/1`
 - **Shows**: Complete member information including tournaments
 
 ### 5. Get Tournament Members
-![Tournament Members](./screenshots/05-tournament-members.png)
+![Tournament Members](screenshots/05-tournament-members.png)
 - **Endpoint**: `GET /api/tournaments/1/members`
 - **Shows**: All participants in a specific tournament
 
 ### 6. Search Members by Name
-![Search by Name](./screenshots/06-search-by-name.png)
+![Search by Name](screenshots/06-search-by-name.png)
 - **Endpoint**: `GET /api/members/search/name/john`
 - **Shows**: Members matching the search term
 
 ### 7. Search Members by Phone
-![Search by Phone](./screenshots/07-search-by-phone.png)
+![Search by Phone](screenshots/07-search-by-phone.png)
 - **Endpoint**: `GET /api/members/search/phone/555`
 - **Shows**: Members with matching phone numbers
 
 ### 8. Search Tournaments by Location
-![Search by Location](./screenshots/08-search-by-location.png)
+![Search by Location](screenshots/08-search-by-location.png)
 - **Endpoint**: `GET /api/tournaments/search/location/valley`
 - **Shows**: Tournaments at matching locations
 
 ### 9. Search Members by Duration
-![Search by Duration](./screenshots/09-search-by-duration.png)
+![Search by Duration](screenshots/09-search-by-duration.png)
 - **Endpoint**: `GET /api/members/search/duration/12`
 - **Shows**: Members with specified membership duration
 
 ### 10. Server Running
-![Server Running](./screenshots/10-server-running.png)
+![Server Running](screenshots/10-server-running.png)
 - **Shows**: Terminal with server startup messages and database connection
 
 ### Screenshot Requirements Met
