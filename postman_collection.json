@@ -1,0 +1,118 @@
+{
+  "info": {
+    "name": "Golf Club API",
+    "description": "Collection for testing Golf Club Tournament Management API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Members",
+      "item": [
+        {
+          "name": "Create Member",
+          "request": {
+            "method": "POST",
+            "header": [{"key": "Content-Type", "value": "application/json"}],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"John Doe\",\n  \"address\": \"123 Main St, City, State\",\n  \"email\": \"john.doe@example.com\",\n  \"phone\": \"555-1234\",\n  \"membershipStartDate\": \"2024-01-01\",\n  \"membershipDuration\": 12\n}"
+            },
+            "url": {"raw": "{{base_url}}/api/members", "host": ["{{base_url}}"], "path": ["api", "members"]}
+          }
+        },
+        {
+          "name": "Get All Members",
+          "request": {
+            "method": "GET",
+            "url": {"raw": "{{base_url}}/api/members", "host": ["{{base_url}}"], "path": ["api", "members"]}
+          }
+        },
+        {
+          "name": "Get Member by ID",
+          "request": {
+            "method": "GET",
+            "url": {"raw": "{{base_url}}/api/members/1", "host": ["{{base_url}}"], "path": ["api", "members", "1"]}
+          }
+        },
+        {
+          "name": "Search Members by Name",
+          "request": {
+            "method": "GET",
+            "url": {"raw": "{{base_url}}/api/members/search/name/john", "host": ["{{base_url}}"], "path": ["api", "members", "search", "name", "john"]}
+          }
+        },
+        {
+          "name": "Search Members by Phone",
+          "request": {
+            "method": "GET",
+            "url": {"raw": "{{base_url}}/api/members/search/phone/555", "host": ["{{base_url}}"], "path": ["api", "members", "search", "phone", "555"]}
+          }
+        },
+        {
+          "name": "Update Member",
+          "request": {
+            "method": "PUT",
+            "header": [{"key": "Content-Type", "value": "application/json"}],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"phone\": \"555-9999\"\n}"
+            },
+            "url": {"raw": "{{base_url}}/api/members/1", "host": ["{{base_url}}"], "path": ["api", "members", "1"]}
+          }
+        }
+      ]
+    },
+    {
+      "name": "Tournaments",
+      "item": [
+        {
+          "name": "Create Tournament",
+          "request": {
+            "method": "POST",
+            "header": [{"key": "Content-Type", "value": "application/json"}],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"startDate\": \"2024-06-15\",\n  \"endDate\": \"2024-06-17\",\n  \"location\": \"Pine Valley Golf Club\",\n  \"entryFee\": 150.00,\n  \"cashPrize\": 5000.00\n}"
+            },
+            "url": {"raw": "{{base_url}}/api/tournaments", "host": ["{{base_url}}"], "path": ["api", "tournaments"]}
+          }
+        },
+        {
+          "name": "Get All Tournaments",
+          "request": {
+            "method": "GET",
+            "url": {"raw": "{{base_url}}/api/tournaments", "host": ["{{base_url}}"], "path": ["api", "tournaments"]}
+          }
+        },
+        {
+          "name": "Add Member to Tournament",
+          "request": {
+            "method": "POST",
+            "url": {"raw": "{{base_url}}/api/tournaments/1/members/1", "host": ["{{base_url}}"], "path": ["api", "tournaments", "1", "members", "1"]}
+          }
+        },
+        {
+          "name": "Get Members in Tournament",
+          "request": {
+            "method": "GET",
+            "url": {"raw": "{{base_url}}/api/tournaments/1/members", "host": ["{{base_url}}"], "path": ["api", "tournaments", "1", "members"]}
+          }
+        },
+        {
+          "name": "Search Tournaments by Location",
+          "request": {
+            "method": "GET",
+            "url": {"raw": "{{base_url}}/api/tournaments/search/location/valley", "host": ["{{base_url}}"], "path": ["api", "tournaments", "search", "location", "valley"]}
+          }
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:3000",
+      "type": "string"
+    }
+  ]
+}
