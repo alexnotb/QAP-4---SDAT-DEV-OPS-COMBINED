@@ -449,62 +449,61 @@ Alex - QAP 4 SDAT DevOps Assessment
 
 ## Testing Screenshots
 
-The following screenshots demonstrate all required functionality:
+All testing screenshots are located in the `screenshots/` folder.
 
 ### 1. API Health Check
-- **URL**: `http://localhost:3000`
-- **Shows**: API version, available endpoints
-- **Status**: ✅ Working
+![API Health](./screenshots/01-api-health.png)
+- **Endpoint**: `GET /api/health`
+- **Shows**: API version and available endpoints
 
 ### 2. Get All Members
-- **URL**: `http://localhost:3000/api/members`
+![Get All Members](./screenshots/02-get-members.png)
+- **Endpoint**: `GET /api/members`
 - **Shows**: List of all golf club members with their tournaments
-- **Status**: ✅ Working
 
 ### 3. Get All Tournaments
-- **URL**: `http://localhost:3000/api/tournaments`
+![Get All Tournaments](./screenshots/03-get-tournaments.png)
+- **Endpoint**: `GET /api/tournaments`
 - **Shows**: List of all tournaments with participating members
-- **Status**: ✅ Working
 
 ### 4. Get Member Details
-- **URL**: `http://localhost:3000/api/members/1`
+![Member Details](./screenshots/04-member-details.png)
+- **Endpoint**: `GET /api/members/1`
 - **Shows**: Complete member information including tournaments
-- **Status**: ✅ Working
 
 ### 5. Get Tournament Members
-- **URL**: `http://localhost:3000/api/tournaments/1/members`
+![Tournament Members](./screenshots/05-tournament-members.png)
+- **Endpoint**: `GET /api/tournaments/1/members`
 - **Shows**: All participants in a specific tournament
-- **Status**: ✅ Working
 
 ### 6. Search Members by Name
-- **URL**: `http://localhost:3000/api/members/search/name/john`
+![Search by Name](./screenshots/06-search-by-name.png)
+- **Endpoint**: `GET /api/members/search/name/john`
 - **Shows**: Members matching the search term
-- **Status**: ✅ Working
 
 ### 7. Search Members by Phone
-- **URL**: `http://localhost:3000/api/members/search/phone/555`
+![Search by Phone](./screenshots/07-search-by-phone.png)
+- **Endpoint**: `GET /api/members/search/phone/555`
 - **Shows**: Members with matching phone numbers
-- **Status**: ✅ Working
 
 ### 8. Search Tournaments by Location
-- **URL**: `http://localhost:3000/api/tournaments/search/location/valley`
+![Search by Location](./screenshots/08-search-by-location.png)
+- **Endpoint**: `GET /api/tournaments/search/location/valley`
 - **Shows**: Tournaments at matching locations
-- **Status**: ✅ Working
 
 ### 9. Search Members by Duration
-- **URL**: `http://localhost:3000/api/members/search/duration/12`
+![Search by Duration](./screenshots/09-search-by-duration.png)
+- **Endpoint**: `GET /api/members/search/duration/12`
 - **Shows**: Members with specified membership duration
-- **Status**: ✅ Working
 
 ### 10. Server Running
-- **Shows**: Terminal with server startup messages
-- **Details**: Database connection, port, environment
-- **Status**: ✅ Working
+![Server Running](./screenshots/10-server-running.png)
+- **Shows**: Terminal with server startup messages and database connection
 
-All screenshots demonstrate:
+### Screenshot Requirements Met
 - ✅ Complete CRUD operations for Members and Tournaments
 - ✅ Many-to-many relationships (members in tournaments)
-- ✅ All required search functions
+- ✅ All 6 required search functions
 - ✅ Proper JSON responses with related data
 - ✅ Server running successfully
 
